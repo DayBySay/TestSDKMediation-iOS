@@ -13,6 +13,7 @@
 		3AB9D37B1F24FC6700B6EC90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB9D3791F24FC6700B6EC90 /* Main.storyboard */; };
 		3AB9D37D1F24FC6700B6EC90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB9D37C1F24FC6700B6EC90 /* Assets.xcassets */; };
 		3AB9D3801F24FC6700B6EC90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB9D37E1F24FC6700B6EC90 /* LaunchScreen.storyboard */; };
+		3AB9D38B1F24FEF500B6EC90 /* Maio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB9D38A1F24FEF500B6EC90 /* Maio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3AB9D37C1F24FC6700B6EC90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AB9D37F1F24FC6700B6EC90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AB9D3811F24FC6700B6EC90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AB9D38A1F24FEF500B6EC90 /* Maio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Maio.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AB9D38B1F24FEF500B6EC90 /* Maio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +61,7 @@
 		3AB9D36F1F24FC6700B6EC90 /* TestSDKMediation */ = {
 			isa = PBXGroup;
 			children = (
+				3AB9D3891F24FEF500B6EC90 /* SDK */,
 				3AB9D3731F24FC6700B6EC90 /* AppDelegate.h */,
 				3AB9D3741F24FC6700B6EC90 /* AppDelegate.m */,
 				3AB9D3761F24FC6700B6EC90 /* ViewController.h */,
@@ -77,6 +81,14 @@
 				3AB9D3711F24FC6700B6EC90 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3AB9D3891F24FEF500B6EC90 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				3AB9D38A1F24FEF500B6EC90 /* Maio.framework */,
+			);
+			path = SDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +286,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YT838T8CB7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TestSDKMediation",
+					"$(PROJECT_DIR)/TestSDKMediation/SDK",
+				);
 				INFOPLIST_FILE = TestSDKMediation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.voyagegroup.TestSDKMediation;
@@ -286,6 +303,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YT838T8CB7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TestSDKMediation",
+					"$(PROJECT_DIR)/TestSDKMediation/SDK",
+				);
 				INFOPLIST_FILE = TestSDKMediation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.voyagegroup.TestSDKMediation;
@@ -312,6 +334,7 @@
 				3AB9D3861F24FC6700B6EC90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
