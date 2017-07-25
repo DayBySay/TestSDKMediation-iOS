@@ -9,7 +9,7 @@
 #import "ViewController.h"
 @import Maio;
 
-@interface ViewController () <MaioDelegate>
+@interface ViewController () <MaioDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
 @end
 
@@ -20,16 +20,39 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)showWithMethodNames:(SEL)selector {
     NSLog(@"Method Name: %@", NSStringFromSelector(selector));
 }
 
+- (void)showAdsWithIndex:(NSInteger)index {
+    switch (index) {
+        case 0:
+            [Maio show];
+            break;
+        default:
+            break;
+    }
+}
+
+#pragma mark - Picker View
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return [[self ADNWs] objectAtIndex:row];
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return [self ADNWs].count;
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSArray *)ADNWs {
+    return @[
+             @"Maio",
+             @"Unity Ads",
+             ];
+}
 
 #pragma mark - Maio delegate
 
