@@ -10,6 +10,7 @@
 @import Maio;
 
 @interface ViewController () <MaioDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 
 @end
 
@@ -22,6 +23,10 @@
 
 - (void)showWithMethodNames:(SEL)selector {
     NSLog(@"Method Name: %@", NSStringFromSelector(selector));
+}
+
+- (IBAction)didTouchUpShowAdButton:(id)sender {
+    [self showAdsWithIndex:[self.pickerView selectedRowInComponent:0]];
 }
 
 - (void)showAdsWithIndex:(NSInteger)index {
