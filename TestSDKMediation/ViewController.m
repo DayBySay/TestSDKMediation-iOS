@@ -7,11 +7,13 @@
 //
 
 #import "ViewController.h"
+#import <Tapjoy/Tapjoy.h>
 @import Maio;
 @import UnityAds;
 
-@interface ViewController () <MaioDelegate, UnityAdsDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@interface ViewController () <MaioDelegate, UnityAdsDelegate, TJPlacementDelegate, TJPlacementVideoDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
+@property (nonatomic) TJPlacement *p;
 
 @end
 
@@ -20,6 +22,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.p = [TJPlacement placementWithName:@"" delegate:self];
+        self.p.videoDelegate = self;
+        [self.p requestContent];
+    });
 }
 
 - (void)showWithMethodNames:(SEL)selector {
@@ -37,6 +49,9 @@
             break;
         case 1:
             [UnityAds show:self];
+            break;
+        case 2:
+            [self.p showContentWithViewController:self];
             break;
         default:
             break;
@@ -60,6 +75,7 @@
     return @[
              @"Maio",
              @"Unity Ads",
+             @"Tapjoy"
              ];
 }
 
@@ -108,6 +124,71 @@
 }
 
 - (void)unityAdsDidFinish:(NSString *)placementId withFinishState:(UnityAdsFinishState)state {
+    [self showWithMethodNames:_cmd];
+}
+
+# pragma mark - Tapjoy delegate
+
+- (void)videoDidStart:(TJPlacement *)placement {
+    NSLog(@"Video did start for: %@", placement.placementName);
+    [self showWithMethodNames:_cmd];
+}
+
+- (void)videoDidComplete:(TJPlacement*)placement {
+    NSLog(@"Video has completed for: %@", placement.placementName);
+    [self showWithMethodNames:_cmd];
+}
+
+- (void)videoDidFail:(TJPlacement*)placement error:(NSString*)errorMsg {
+    NSLog(@"Video did fail for: %@ with error: %@", placement.placementName, errorMsg);
+    [self showWithMethodNames:_cmd];
+}
+
+- (void)requestDidSucceed:(TJPlacement*)placement
+{
+    [self showWithMethodNames:_cmd];
+}
+
+- (void)contentIsReady:(TJPlacement*)placement
+{
+    [self showWithMethodNames:_cmd];
+}
+
+- (void)requestDidFail:(TJPlacement*)placement error:(NSError *)error
+{
+    [self showWithMethodNames:_cmd];
+}
+
+- (void)contentDidAppear:(TJPlacement*)placement
+{
+    [self showWithMethodNames:_cmd];
+}
+
+- (void)contentDidDisappear:(TJPlacement*)placement
+{
+    [self showWithMethodNames:_cmd];
+}
+
+- (void)placement:(TJPlacement*)placement didRequestPurchase:(TJActionRequest*)request productId:(NSString*)productId
+{
+    [self showWithMethodNames:_cmd];
+}
+
+
+- (void)placement:(TJPlacement*)placement didRequestReward:(TJActionRequest*)request itemId:(NSString*)itemId quantity:(int)quantity
+{
+    [self showWithMethodNames:_cmd];
+}
+
+
+- (void)placement:(TJPlacement*)placement didRequestCurrency:(TJActionRequest*)request currency:(NSString*)currency amount:(int)amount
+{
+    [self showWithMethodNames:_cmd];
+}
+
+
+- (void)placement:(TJPlacement*)placement didRequestNavigation:(TJActionRequest*)request location:(NSString *)location
+{
     [self showWithMethodNames:_cmd];
 }
 

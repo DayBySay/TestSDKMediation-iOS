@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Tapjoy/Tapjoy.h>
 @import Maio;
 @import UnityAds;
 
@@ -25,7 +26,31 @@
     //[UnityAds setDebugMode:YES];
     [UnityAds initialize:@"14850" delegate:self.window.rootViewController];
     
+    
+    // Tapjoy Connect Notifications
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(tjcConnectSuccess:)
+                                                 name:TJC_CONNECT_SUCCESS
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(tjcConnectFail:)
+                                                 name:TJC_CONNECT_FAILED
+                                               object:nil];
+    [Tapjoy connect:@""];
+    
     return YES;
+}
+
+
+- (void)tjcConnectSuccess:(NSNotification*)notifyObj
+{
+    NSLog(@"Tapjoy connect Succeeded");
+}
+
+
+- (void)tjcConnectFail:(NSNotification*)notifyObj
+{
+    NSLog(@"Tapjoy connect Failed");
 }
 
 
