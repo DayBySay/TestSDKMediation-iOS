@@ -14,6 +14,7 @@
 		3AB9D37D1F24FC6700B6EC90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB9D37C1F24FC6700B6EC90 /* Assets.xcassets */; };
 		3AB9D3801F24FC6700B6EC90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB9D37E1F24FC6700B6EC90 /* LaunchScreen.storyboard */; };
 		3AB9D38F1F25017600B6EC90 /* Maio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB9D38E1F25017600B6EC90 /* Maio.framework */; };
+		3AB9D3951F25073900B6EC90 /* VideoRewardMaioAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9D3941F25073900B6EC90 /* VideoRewardMaioAdapter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		3AB9D37F1F24FC6700B6EC90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AB9D3811F24FC6700B6EC90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AB9D38E1F25017600B6EC90 /* Maio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Maio.framework; sourceTree = "<group>"; };
+		3AB9D3931F25073900B6EC90 /* VideoRewardMaioAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoRewardMaioAdapter.h; sourceTree = "<group>"; };
+		3AB9D3941F25073900B6EC90 /* VideoRewardMaioAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoRewardMaioAdapter.m; sourceTree = "<group>"; };
+		3AB9D3961F25081300B6EC90 /* VideoRewardAbstractAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoRewardAbstractAdapter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,9 @@
 		3AB9D38C1F25017600B6EC90 /* Adapters */ = {
 			isa = PBXGroup;
 			children = (
+				3AB9D3931F25073900B6EC90 /* VideoRewardMaioAdapter.h */,
+				3AB9D3941F25073900B6EC90 /* VideoRewardMaioAdapter.m */,
+				3AB9D3961F25081300B6EC90 /* VideoRewardAbstractAdapter.h */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -173,6 +180,7 @@
 			files = (
 				3AB9D3781F24FC6700B6EC90 /* ViewController.m in Sources */,
 				3AB9D3751F24FC6700B6EC90 /* AppDelegate.m in Sources */,
+				3AB9D3951F25073900B6EC90 /* VideoRewardMaioAdapter.m in Sources */,
 				3AB9D3721F24FC6700B6EC90 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
