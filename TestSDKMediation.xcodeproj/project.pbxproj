@@ -15,7 +15,7 @@
 		3AB9D3801F24FC6700B6EC90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB9D37E1F24FC6700B6EC90 /* LaunchScreen.storyboard */; };
 		3AB9D38F1F25017600B6EC90 /* Maio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB9D38E1F25017600B6EC90 /* Maio.framework */; };
 		3AB9D3951F25073900B6EC90 /* VideoRewardMaioAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9D3941F25073900B6EC90 /* VideoRewardMaioAdapter.m */; };
-		3AF231F21F2783EA00DD9440 /* UnityAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF231F11F2783EA00DD9440 /* UnityAds.framework */; };
+		3AF231F81F27892900DD9440 /* UnityAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF231F71F27892900DD9440 /* UnityAds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		3AB9D3931F25073900B6EC90 /* VideoRewardMaioAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoRewardMaioAdapter.h; sourceTree = "<group>"; };
 		3AB9D3941F25073900B6EC90 /* VideoRewardMaioAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoRewardMaioAdapter.m; sourceTree = "<group>"; };
 		3AB9D3961F25081300B6EC90 /* VideoRewardAbstractAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoRewardAbstractAdapter.h; sourceTree = "<group>"; };
-		3AF231F11F2783EA00DD9440 /* UnityAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UnityAds.framework; sourceTree = "<group>"; };
+		3AF231F71F27892900DD9440 /* UnityAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UnityAds.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AB9D38F1F25017600B6EC90 /* Maio.framework in Frameworks */,
-				3AF231F21F2783EA00DD9440 /* UnityAds.framework in Frameworks */,
+				3AF231F81F27892900DD9440 /* UnityAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,8 +104,8 @@
 		3AB9D38D1F25017600B6EC90 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
+				3AF231F71F27892900DD9440 /* UnityAds.framework */,
 				3AB9D38E1F25017600B6EC90 /* Maio.framework */,
-				3AF231F11F2783EA00DD9440 /* UnityAds.framework */,
 			);
 			path = SDK;
 			sourceTree = "<group>";

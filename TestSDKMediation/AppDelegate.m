@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 @import Maio;
+@import UnityAds;
 
 @interface AppDelegate ()
 
@@ -18,8 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [Maio setAdTestMode:YES];
+    //[Maio setAdTestMode:YES];
     [Maio startWithMediaId:@"DemoPublisherMedia" delegate:self.window.rootViewController];
+    
+    //[UnityAds setDebugMode:YES];
+    [UnityAds initialize:@"14850" delegate:self.window.rootViewController];
     
     return YES;
 }

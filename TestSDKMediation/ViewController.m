@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 @import Maio;
+@import UnityAds;
 
-@interface ViewController () <MaioDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@interface ViewController () <MaioDelegate, UnityAdsDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 
 @end
@@ -33,6 +34,9 @@
     switch (index) {
         case 0:
             [Maio show];
+            break;
+        case 1:
+            [UnityAds show:self];
             break;
         default:
             break;
@@ -86,6 +90,24 @@
 }
 
 - (void)maioDidFinishAd:(NSString *)zoneId playtime:(NSInteger)playtime skipped:(BOOL)skipped rewardParam:(NSString *)rewardParam {
+    [self showWithMethodNames:_cmd];
+}
+
+# pragma mark - UnityAds delegate
+
+- (void)unityAdsReady:(NSString *)placementId {
+    [self showWithMethodNames:_cmd];
+}
+
+- (void)unityAdsDidStart:(NSString *)placementId {
+    [self showWithMethodNames:_cmd];
+}
+
+- (void)unityAdsDidError:(UnityAdsError)error withMessage:(NSString *)message {
+    [self showWithMethodNames:_cmd];
+}
+
+- (void)unityAdsDidFinish:(NSString *)placementId withFinishState:(UnityAdsFinishState)state {
     [self showWithMethodNames:_cmd];
 }
 
