@@ -308,8 +308,6 @@
 				DEVELOPMENT_TEAM = YT838T8CB7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/TestSDKMediation",
-					"$(PROJECT_DIR)/TestSDKMediation/SDK",
 					"$(PROJECT_DIR)/SDK",
 				);
 				INFOPLIST_FILE = TestSDKMediation/Info.plist;
@@ -326,8 +324,6 @@
 				DEVELOPMENT_TEAM = YT838T8CB7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/TestSDKMediation",
-					"$(PROJECT_DIR)/TestSDKMediation/SDK",
 					"$(PROJECT_DIR)/SDK",
 				);
 				INFOPLIST_FILE = TestSDKMediation/Info.plist;
