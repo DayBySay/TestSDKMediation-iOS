@@ -16,6 +16,7 @@
 		3AB9D38F1F25017600B6EC90 /* Maio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB9D38E1F25017600B6EC90 /* Maio.framework */; };
 		3AB9D3951F25073900B6EC90 /* VideoRewardMaioAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9D3941F25073900B6EC90 /* VideoRewardMaioAdapter.m */; };
 		3AF231F81F27892900DD9440 /* UnityAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF231F71F27892900DD9440 /* UnityAds.framework */; };
+		3AF2320A1F27AC8100DD9440 /* AppLovinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF232091F27AC8100DD9440 /* AppLovinSDK.framework */; };
 		78CFF71AE6C7FCC2CC2E91FD /* libPods-TestSDKMediation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB65E852526EB551C33D7EA /* libPods-TestSDKMediation.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		3AF232031F278CA800DD9440 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3AF232051F278CAF00DD9440 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3AF232071F278CC400DD9440 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		3AF232091F27AC8100DD9440 /* AppLovinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppLovinSDK.framework; sourceTree = "<group>"; };
 		5FC648F06AD157AE504F1A83 /* Pods-TestSDKMediation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSDKMediation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestSDKMediation/Pods-TestSDKMediation.debug.xcconfig"; sourceTree = "<group>"; };
 		7CCB87D0978F8BB55F725799 /* Pods-TestSDKMediation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSDKMediation.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestSDKMediation/Pods-TestSDKMediation.release.xcconfig"; sourceTree = "<group>"; };
 		9DB65E852526EB551C33D7EA /* libPods-TestSDKMediation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestSDKMediation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AF2320A1F27AC8100DD9440 /* AppLovinSDK.framework in Frameworks */,
 				3AB9D38F1F25017600B6EC90 /* Maio.framework in Frameworks */,
 				3AF231F81F27892900DD9440 /* UnityAds.framework in Frameworks */,
 				78CFF71AE6C7FCC2CC2E91FD /* libPods-TestSDKMediation.a in Frameworks */,
@@ -125,6 +128,7 @@
 		3AB9D38D1F25017600B6EC90 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
+				3AF232091F27AC8100DD9440 /* AppLovinSDK.framework */,
 				3AF231F71F27892900DD9440 /* UnityAds.framework */,
 				3AB9D38E1F25017600B6EC90 /* Maio.framework */,
 			);
