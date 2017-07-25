@@ -10,6 +10,7 @@
 #import <Tapjoy/Tapjoy.h>
 @import Maio;
 @import UnityAds;
+@import AppLovinSDK;
 
 @interface AppDelegate ()
 
@@ -38,6 +39,7 @@
                                                object:nil];
     [Tapjoy connect:@""];
     
+    [ALSdk initializeSdk];
     return YES;
 }
 
