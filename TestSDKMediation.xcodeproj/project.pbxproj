@@ -16,6 +16,7 @@
 		3AB9D38F1F25017600B6EC90 /* Maio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB9D38E1F25017600B6EC90 /* Maio.framework */; };
 		3AB9D3951F25073900B6EC90 /* VideoRewardMaioAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9D3941F25073900B6EC90 /* VideoRewardMaioAdapter.m */; };
 		3AF231F81F27892900DD9440 /* UnityAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF231F71F27892900DD9440 /* UnityAds.framework */; };
+		78CFF71AE6C7FCC2CC2E91FD /* libPods-TestSDKMediation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB65E852526EB551C33D7EA /* libPods-TestSDKMediation.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,14 @@
 		3AB9D3941F25073900B6EC90 /* VideoRewardMaioAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoRewardMaioAdapter.m; sourceTree = "<group>"; };
 		3AB9D3961F25081300B6EC90 /* VideoRewardAbstractAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoRewardAbstractAdapter.h; sourceTree = "<group>"; };
 		3AF231F71F27892900DD9440 /* UnityAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UnityAds.framework; sourceTree = "<group>"; };
+		3AF231FF1F278C9D00DD9440 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		3AF232011F278CA200DD9440 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3AF232031F278CA800DD9440 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3AF232051F278CAF00DD9440 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3AF232071F278CC400DD9440 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		5FC648F06AD157AE504F1A83 /* Pods-TestSDKMediation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSDKMediation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestSDKMediation/Pods-TestSDKMediation.debug.xcconfig"; sourceTree = "<group>"; };
+		7CCB87D0978F8BB55F725799 /* Pods-TestSDKMediation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSDKMediation.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestSDKMediation/Pods-TestSDKMediation.release.xcconfig"; sourceTree = "<group>"; };
+		9DB65E852526EB551C33D7EA /* libPods-TestSDKMediation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestSDKMediation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,12 +52,22 @@
 			files = (
 				3AB9D38F1F25017600B6EC90 /* Maio.framework in Frameworks */,
 				3AF231F81F27892900DD9440 /* UnityAds.framework in Frameworks */,
+				78CFF71AE6C7FCC2CC2E91FD /* libPods-TestSDKMediation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35EDA327A2806E3455D17623 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5FC648F06AD157AE504F1A83 /* Pods-TestSDKMediation.debug.xcconfig */,
+				7CCB87D0978F8BB55F725799 /* Pods-TestSDKMediation.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3AB9D3641F24FC6700B6EC90 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +75,8 @@
 				3AB9D38D1F25017600B6EC90 /* SDK */,
 				3AB9D36F1F24FC6700B6EC90 /* TestSDKMediation */,
 				3AB9D36E1F24FC6700B6EC90 /* Products */,
+				3AF231FE1F278C9C00DD9440 /* Frameworks */,
+				35EDA327A2806E3455D17623 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +131,19 @@
 			path = SDK;
 			sourceTree = "<group>";
 		};
+		3AF231FE1F278C9C00DD9440 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AF232071F278CC400DD9440 /* CoreMotion.framework */,
+				3AF232051F278CAF00DD9440 /* CoreGraphics.framework */,
+				3AF232031F278CA800DD9440 /* CoreData.framework */,
+				3AF232011F278CA200DD9440 /* CFNetwork.framework */,
+				3AF231FF1F278C9D00DD9440 /* AdSupport.framework */,
+				9DB65E852526EB551C33D7EA /* libPods-TestSDKMediation.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,9 +151,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AB9D3841F24FC6700B6EC90 /* Build configuration list for PBXNativeTarget "TestSDKMediation" */;
 			buildPhases = (
+				81593B12D38D13D64B8F3151 /* [CP] Check Pods Manifest.lock */,
 				3AB9D3691F24FC6700B6EC90 /* Sources */,
 				3AB9D36A1F24FC6700B6EC90 /* Frameworks */,
 				3AB9D36B1F24FC6700B6EC90 /* Resources */,
+				794ABC9784312F6F989E3B2D /* [CP] Embed Pods Frameworks */,
+				3264E84F50C56246BC8DDE5B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,6 +213,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3264E84F50C56246BC8DDE5B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestSDKMediation/Pods-TestSDKMediation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		794ABC9784312F6F989E3B2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestSDKMediation/Pods-TestSDKMediation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81593B12D38D13D64B8F3151 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3AB9D3691F24FC6700B6EC90 /* Sources */ = {
@@ -303,6 +388,7 @@
 		};
 		3AB9D3851F24FC6700B6EC90 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FC648F06AD157AE504F1A83 /* Pods-TestSDKMediation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YT838T8CB7;
@@ -319,6 +405,7 @@
 		};
 		3AB9D3861F24FC6700B6EC90 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CCB87D0978F8BB55F725799 /* Pods-TestSDKMediation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YT838T8CB7;
